@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular';
+    background-color: #fff;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+h1 {
+    text-align: center;
+}
+
+section {
+    width: 80%;
+    max-width: 700px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    box-shadow: 0 7px 11px 0 rgb(0 0 0 / 10%), 0 2px 4px 0 rgb(0 0 0 / 10%);
+    background-color: #eeeeee;
+}
+
+section .metodo-get {
+    width: fit-content;
+    background-color: #6ace7f;
+    padding: 5px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+section .metodo-post {
+    width: fit-content;
+    background-color: #ce9f6a;
+    padding: 5px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+section .metodo-del {
+    width: fit-content;
+    background-color: #ce6a6a;
+    padding: 5px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
