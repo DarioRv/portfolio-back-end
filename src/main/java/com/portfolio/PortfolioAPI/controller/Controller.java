@@ -18,6 +18,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -39,17 +40,21 @@ public class Controller {
     public IContactoService contService;
     
     // Persona
-    @PostMapping ("/new/persona")
+    @PostMapping ("/new/personal-data")
     public void crearPersona (@RequestBody Persona persona) {
         persService.crearPersona(persona);
     }
-    @DeleteMapping ("/delete/persona")
+    @DeleteMapping ("/delete/personal-data")
     public void eliminarPersona (@RequestParam Long id) {
         persService.borrarPersona(id);
     }
-    @GetMapping ("/view/persona")
+    @GetMapping ("/view/personal-data")
     public Persona obtenerPersona (@RequestParam Long id) {
         return persService.obtenerPersona(id);
+    }
+    @PutMapping ("/update/personal-data")
+    public void editarPersona (@RequestBody Persona persona) {
+        persService.crearPersona(persona);
     }
     
     // Experiencia laboral
@@ -61,9 +66,13 @@ public class Controller {
     public void eliminarExperienciaLaboral (@RequestParam Long id) {
         expService.eliminarExperienciaLaboral(id);
     }
-    @GetMapping ("/ver/laboral-experience")
+    @GetMapping ("/view/laboral-experience")
     public List<ExperienciaLaboral> verExperienciaLaboral () {
         return expService.verExperienciaLaboral();
+    }
+    @PutMapping ("/update/laboral-experience")
+    public void editarExperienciaLaboral (@RequestBody ExperienciaLaboral experiencia) {
+        expService.agregarExperienciaLaboral(experiencia);
     }
     
     // Educación
@@ -79,6 +88,10 @@ public class Controller {
     public List<Educacion> obtenerEducacion (){
         return eduService.obtenerEducacion();
     }
+    @PutMapping ("/update/education")
+    public void editarEducacion (@RequestBody Educacion educacion) {
+        eduService.agregarEducacion(educacion);
+    }
     
     // Habilidad
     @PostMapping ("/new/skill") 
@@ -92,6 +105,10 @@ public class Controller {
     @GetMapping ("/view/skills")
     public List<Habilidad> obtenerHabilidades () {
         return habService.obtenerHabilidades();
+    }
+    @PutMapping ("/update/skill")
+    public void editarHabilidad (@RequestBody Habilidad habilidad) {
+        habService.agregarHabilidad(habilidad);
     }
     
     // Proyecto
@@ -107,6 +124,10 @@ public class Controller {
     public List<Proyecto> obtenerProyectos () {
         return proyService.obtenerProyectos();
     }
+    @PutMapping ("/update/project")
+    public void editarProyecto (@RequestBody Proyecto proyecto) {
+        proyService.agregarProyecto(proyecto);
+    }
     
     // Contacto
     @PostMapping ("/new/contact")
@@ -120,6 +141,10 @@ public class Controller {
     @GetMapping ("/view/contacts")
     public List<Contacto> obtenerContacto () {
         return contService.obtenerContacto();
+    }
+    @PutMapping ("/update/contact")
+    public void editarContacto (@RequestBody Contacto contacto) {
+        contService.agregarContacto(contacto);
     }
     
     // Armar portfolio

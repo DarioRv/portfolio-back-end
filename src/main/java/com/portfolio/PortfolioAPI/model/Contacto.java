@@ -15,21 +15,22 @@ public class Contacto {
     private Long id;
     private String type;
     private String alias;
-    private String address;
     private String url;
+    private String icon;
+    private boolean visible;
     private Long idPersona;
 
     public Contacto() {
     }
 
-    public Contacto(Long id, String alias, String address, String url, Long idPersona) {
+    public Contacto(Long id, String type, String alias, String url, String icon, boolean visible, Long idPersona) {
         this.id = id;
+        this.type = type;
         this.alias = alias;
-        this.address = address;
         this.url = url;
+        this.icon = icon;
+        this.visible = visible;
         this.idPersona = idPersona;
     }
-
-    
     
 }
