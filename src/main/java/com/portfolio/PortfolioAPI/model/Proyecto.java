@@ -16,23 +16,23 @@ public class Proyecto {
     private String projectName;
     private String date;
     private String description;
-    private String url;
+    private String webSiteUrl;
+    private String codeUrl;
     private String implementedTechnologies;
     private Long idPersona;
 
     public Proyecto() {
     }
 
-    public Proyecto(Long id, String projectName, String date, String description, String url, String implementedTechnologies, Long idPersona) {
+    public Proyecto(Long id, String projectName, String date, String description, String webSiteUrl, String codeUrl, String implementedTechnologies, Long idPersona) {
         this.id = id;
         this.projectName = projectName;
         this.date = date;
         this.description = description;
-        this.url = url;
+        this.webSiteUrl = webSiteUrl;
+        this.codeUrl = codeUrl;
         this.implementedTechnologies = implementedTechnologies;
         this.idPersona = idPersona;
     }
-
-    
     
 }
