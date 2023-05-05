@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Métodos disponibles</h1>
+    <h2>Persona</h2>
+    <section>
+        <h3>Método</h3>
+        <h3>URL</h3>
+        <h3>Parametros</h3>
+        <div class="metodo-post">POST</div>
+        <div class="url">/new/persona</div>
+        <div class="parametros"><span>Persona: </span><span>{ <br>
+            "name": string, <br>
+            "position": string, <br>
+            "description": string, <br>
+            "about": string <br>
+        }</span></div>
+    </section>
+    <section>
+        <h3>Método</h3>
+        <h3>URL</h3>
+        <h3>Parametros</h3>
+        <div class="metodo-del">DEL</div>
+        <div class="url">/delete/persona?id=valor</div>
+        <div class="parametros"><span>id: </span><span>int</span></div>
+    </section>
+    <section>
+        <h3>Método</h3>
+        <h3>URL</h3>
+        <h3>Parametros</h3>
+        <div class="metodo-get">GET</div>
+        <div class="url">/view/persona?id=valor</div>
+        <div class="parametros"><span>id: </span><span>int</span></div>
+    </section>
+    <h2>Experiencia laboral</h2>
+    <section>
+        <h3>Método</h3>
+        <h3>URL</h3>
+        <h3>Parametros</h3>
+        <div class="metodo-post">POST</div>
+        <div class="url">/new/laboral-experience</div>
+        <div class="parametros"><span>LaboralExperience: </span><span>{ <br>
+            "projectName": string, <br>
+            "date": string, <br>
+            "description": string, <br>
+            "url": string, <br>
+            "idPersona": int
+        }</span></div>
+    </section>
+    <section>
+        <h3>Método</h3>
+        <h3>URL</h3>
+        <h3>Parametros</h3>
+        <div class="metodo-del">DEL</div>
+        <div class="url">/delete/laboral-experience?id=valor</div>
+        <div class="parametros"><span>id: </span><span>int</span></div>
+    </section>
+    <section>
+        <h3>Método</h3>
+        <h3>URL</h3>
+        <h3>Parametros</h3>
+        <div class="metodo-get">GET</div>
+        <div class="url">/ver/laboral-experience</div>
+        <div class="parametros">NA</div>
+    </section>
+    <h2>Educación</h2>
+    <section>
+        <h3>Método</h3>
+        <h3>URL</h3>
+        <h3>Parametros</h3>
+        <div class="metodo-post">POST</div>
+        <div class="url">/new/education</div>
+        <div class="parametros">Education: { <br>
+            "institutionImage": string, <br>
+            "institutionName": string, <br>
+            "shortName": string, <br>
+            "certificate": string, <br>
+            "date": string, <br>
+            "observations": string, <br>
+            "idPersona": int
+        }</div>
+    </section>
+    <section>
+        <h3>Método</h3>
+        <h3>URL</h3>
+        <h3>Parametros</h3>
+        <div class="metodo-del">DEL</div>
+        <div class="url">/delete/education</div>
+        <div class="parametros"><span>id: </span><span>int</span></div>
+    </section>
+    <section>
+        <h3>Método</h3>
+        <h3>URL</h3>
+        <h3>Parametros</h3>
+        <div class="metodo-get">GET</div>
+        <div class="url">/view/education</div>
+        <div class="parametros">NA</div>
+    </section>
+    <h2>Habilidad</h2>
+    <section>
+        <h3>Método</h3>
+        <h3>URL</h3>
+        <h3>Parametros</h3>
+        <div class="metodo-post">POST</div>
+        <div class="url">/new/skill</div>
+        <div class="parametros">Habilidad: { <br>
+            "name": string, <br>
+            "image": string, <br>
+            "idPersona": int
+        }</div>
+    </section>
+    <section>
+        <h3>Método</h3>
+        <h3>URL</h3>
+        <h3>Parametros</h3>
+        <div class="metodo-del">DEL</div>
+        <div class="url">/delete/skill</div>
+        <div class="parametros"><span>id: </span><span>int</span></div>
+    </section>
+    <section>
+        <h3>Método</h3>
+        <h3>URL</h3>
+        <h3>Parametros</h3>
+        <div class="metodo-get">GET</div>
+        <div class="url">/view/skills</div>
+        <div class="parametros">NA</div>
+    </section>
+    <h2>Proyecto</h2>
+    <section>
+        <h3>Método</h3>
+        <h3>URL</h3>
+        <h3>Parametros</h3>
+        <div class="metodo-post">POST</div>
+        <div class="url">/new/project</div>
+        <div class="parametros">Project: {
+            "projectName": string,
+            "date": string,
+            "description": string,
+            "url": string,
+            "idPersona": int
+        }</div>
+    </section>
+    <section>
+        <h3>Método</h3>
+        <h3>URL</h3>
+        <h3>Parametros</h3>
+        <div class="metodo-del">DEL</div>
+        <div class="url">/delete/project</div>
+        <div class="parametros"><span>id: </span><span>int</span></div>
+    </section>
+    <section>
+        <h3>Método</h3>
+        <h3>URL</h3>
+        <h3>Parametros</h3>
+        <div class="metodo-get">GET</div>
+        <div class="url">/view/projects</div>
+        <div class="parametros">NA</div>
+    </section>
+    <h2>Contacto</h2>
+    <section>
+        <h3>Método</h3>
+        <h3>URL</h3>
+        <h3>Parametros</h3>
+        <div class="metodo-post">POST</div>
+        <div class="url">/new/contact</div>
+        <div class="parametros">Contact: { <br>
+            "type": string, <br>
+            "alias": string, <br>
+            "address": string, <br>
+            "url": string, <br>
+            "idPersona": int
+        }</div>
+    </section>
+    <section>
+        <h3>Método</h3>
+        <h3>URL</h3>
+        <h3>Parametros</h3>
+        <div class="metodo-del">DEL</div>
+        <div class="url">/delete/contact</div>
+        <div class="parametros"><span>id: </span><span>int</span></div>
+    </section>
+    <section>
+        <h3>Método</h3>
+        <h3>URL</h3>
+        <h3>Parametros</h3>
+        <div class="metodo-get">GET</div>
+        <div class="url">/view/contact</div>
+        <div class="parametros">NA</div>
+    </section>
+    <h2>Ver datos del portfolio</h2>
+    <section>
+        <h3>Método</h3>
+        <h3>URL</h3>
+        <h3>Parametros</h3>
+        <div class="metodo-get">GET</div>
+        <div class="url">/get/portfolio?id=valor</div>
+        <div class="parametros"><span>id: </span><span>int</span></div>
+    </section>
+</body>
+</html>
